@@ -22,3 +22,9 @@ For installing the audio files:
     
 You're done
     
+# Vim
+
+    tar xf vim.tar.gz  /home/(Your-user-goes-here)/.vim
+    cp .vimrc /home/(Your-user-goes-here)/.vimrc
+    
+ That's it for vim dotfiles deployment
