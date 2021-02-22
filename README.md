@@ -4,6 +4,7 @@ Own dotfiles should help sometime
 - Pulseaudio (for the audioup and down)
 - x server (.xinitrc)
 - urxvt terminal
+- vim/neovim
 
 # Instalation
 Install dwm or what you wm you prefer (My latest build of dwm is in the tar file, should be configured with everything)
