@@ -1,9 +1,9 @@
-while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-do
-	sleep 1
-done &
+pulseaudio &
+flameshot &
+dwmblocks &
 xrdb -merge ~/.Xresources &
-feh --bg-scale /home/asimov/Downloads/samurai.png &
+feh --bg-scale /home/asimov/Pictures/bg12.jpeg &
 xcompmgr &
 
 exec dwm
+
