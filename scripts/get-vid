@@ -1,0 +1,5 @@
+#!/bin/sh
+read -p 'Youtube Link: ' linkvar
+read -p 'Video Name: ' namevar
+youtube-dl -o /home/asimov/Videos/$namevar.mp4 $linkvar
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+read -p 'Song Youtube Link: ' linkvar
+read -p 'Song Name:' namevar
+youtube-dl -x --audio-format m4a -o  /home/asimov/Music/$namevar.webm $linkvar
+

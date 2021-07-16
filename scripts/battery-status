@@ -1,0 +1,27 @@
+#!/bin/sh
+
+
+status=$(cat /sys/class/power_supply/BAT0/status)
+nivelactual=$(cat /sys/class/power_supply/BAT0/charge_now)
+niveltotal=$(cat /sys/class/power_supply/BAT0/charge_full)
+
+
+	case "$status" in 
+		"Full") level=$(echo "scale=2 ; ($nivelactual / $niveltotal) * 100" |  bc);;
+		"Charging") level=$(echo "scale=2 ; ($nivelactual / $niveltotal) * 100" |  bc);;
+		"Discharging") level=$(echo "scale=2 ; ($nivelactual / $niveltotal) * 100" |  bc);;
+		"Not charging") level="!?!?!";;
+		"Discharging") level=$(echo "scale=2 ; ($nivelactual / $niveltotal) * 100" |  bc);;
+		"Unknown") level="!?!?!";;
+	
+	esac
+if [ "$level" = "!?!?!" ]
+  then
+	echo "$status $level"
+fi
+if [ "$level" != "!?!?!" ]
+  then
+	echo "$status $level%"
+fi
+
+
