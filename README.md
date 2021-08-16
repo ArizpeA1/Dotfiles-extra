@@ -1,7 +1,7 @@
 # Dotfiles-extra
 Own dotfiles should help sometime
 # Requirements.
-- Pulseaudio (for the audioup and down)
+- Pulseaudio (for audioup and down)
 - x server (.xinitrc)
 - neovim
 
@@ -22,9 +22,13 @@ For installing the audio files:
     
 You're done
     
-# Vim
-
-    tar xf vim.tar.gz  /home/(Your-user-goes-here)/.vim
+# Vim/Nvim
+For .vimrc:
+    
     cp .vimrc /home/(Your-user-goes-here)/.vimrc
     
+ For Nvim:
+ 
+    cp nvim/ $HOME/.config/nvim
+ 
  That's it for vim dotfiles deployment
